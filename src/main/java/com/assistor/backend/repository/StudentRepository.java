@@ -1,4 +1,4 @@
-package com.assistor.backend.Repository;
+package com.assistor.backend.repository;
 
 import com.assistor.backend.entity.Student;
 import org.springframework.data.mongodb.repository.MongoRepository;

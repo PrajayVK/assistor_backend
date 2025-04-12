@@ -2,7 +2,7 @@ package com.assistor.backend.controller;
 
 
 
-import com.assistor.backend.Repository.StudentRepository;
+import com.assistor.backend.repository.StudentRepository;
 import com.assistor.backend.entity.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import static com.assistor.backend.constants.SignupConstants.EMAIL_ALREADY_EXISTS;
+
 @CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api")
@@ -20,7 +22,7 @@ public class StudentController {
     public ResponseEntity<SignupResponse> signup(@RequestBody Student student) {
         String result = studentService.registerStudent(student);
 
-        if ("Email already registered".equals(result)) {
+        if (EMAIL_ALREADY_EXISTS.equals(result)) {
             return ResponseEntity.status(400).body(new SignupResponse(false, result, student.getEmail()));
         }
 

@@ -1,11 +1,9 @@
 package com.assistor.backend.service;
 
-import com.assistor.backend.constants.SignupConstants;
 import com.assistor.backend.entity.Student;
 import com.assistor.backend.repository.StudentRepository;
 import com.assistor.backend.validation.EmailValidator;
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 

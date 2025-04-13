@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import static com.assistor.backend.constants.SignupConstants.EMAIL_ALREADY_EXISTS;
+import static com.assistor.backend.constants.SignupConstants.INVALID_REQUEST;
 
 @CrossOrigin(origins = "*")
 @RestController
@@ -23,6 +24,9 @@ public class StudentController {
         String result = studentService.registerStudent(student);
 
         if (EMAIL_ALREADY_EXISTS.equals(result)) {
+            return ResponseEntity.status(400).body(new SignupResponse(false, result, student.getEmail()));
+        }
+        if(INVALID_REQUEST.equals(result)){
             return ResponseEntity.status(400).body(new SignupResponse(false, result, student.getEmail()));
         }
 

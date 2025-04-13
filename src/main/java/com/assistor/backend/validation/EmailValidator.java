@@ -1,7 +1,11 @@
 package com.assistor.backend.validation;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
+
 import java.util.regex.Pattern;
 
+@Component
 public class EmailValidator {
 
     private static final Pattern EMAIL_PATTERN = Pattern.compile(

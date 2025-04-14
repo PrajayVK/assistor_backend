@@ -1,4 +1,4 @@
-package com.assistor.backend.dto;
+package com.assistor.backend.dto.Response;
 
 
 import lombok.AllArgsConstructor;
